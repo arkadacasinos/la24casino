@@ -1,0 +1,280 @@
+/* Ла Казино — собственные стили (без сторонних библиотек) */
+
+:root {
+  --lc-bg: #0a2a1f;
+  --lc-bg-soft: #10382a;
+  --lc-bg-deep: #061b14;
+  --lc-gold: #d4af37;
+  --lc-gold-soft: #e6c96a;
+  --lc-ivory: #f2ebd9;
+  --lc-muted: #9db8a8;
+  --lc-border: rgba(212, 175, 55, 0.22);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+.lc24-root {
+  background: var(--lc-bg);
+}
+
+.lc24-body {
+  font-family: var(--lc-font-body), system-ui, -apple-system, sans-serif;
+  color: var(--lc-ivory);
+  background: var(--lc-bg);
+  line-height: 1.6;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.lc24-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ---------- Hero ---------- */
+.lc24-hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--lc-bg-deep);
+}
+
+.lc24-hero-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 40px 20px 32px;
+  order: 2;
+}
+
+.lc24-eyebrow {
+  font-size: 13px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--lc-gold);
+  font-weight: 600;
+}
+
+.lc24-hero-title {
+  font-family: var(--lc-font-head), Georgia, serif;
+  font-size: 30px;
+  line-height: 1.15;
+  font-weight: 700;
+  color: var(--lc-ivory);
+  text-wrap: balance;
+}
+
+.lc24-hero-lead {
+  font-size: 16px;
+  color: var(--lc-muted);
+  max-width: 34rem;
+}
+
+.lc24-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  padding: 14px 26px;
+  border-radius: 10px;
+  background: var(--lc-gold);
+  color: #0a2a1f;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.lc24-cta:hover {
+  background: var(--lc-gold-soft);
+  transform: translateY(-1px);
+}
+
+.lc24-hero-img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  order: 1;
+}
+
+/* ---------- Sections ---------- */
+.lc24-section {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 40px 20px;
+  border-top: 1px solid var(--lc-border);
+}
+
+.lc24-section:nth-of-type(even) {
+  background: var(--lc-bg-soft);
+}
+
+.lc24-h2 {
+  font-family: var(--lc-font-head), Georgia, serif;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--lc-gold-soft);
+  text-wrap: balance;
+}
+
+.lc24-text {
+  font-size: 16px;
+  color: var(--lc-ivory);
+  max-width: 40rem;
+}
+
+.lc24-text strong {
+  color: var(--lc-gold-soft);
+  font-weight: 600;
+}
+
+.lc24-figure {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.lc24-figure-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid var(--lc-border);
+}
+
+.lc24-figure-cap {
+  font-size: 13px;
+  color: var(--lc-muted);
+}
+
+/* ---------- Feature list ---------- */
+.lc24-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  list-style: none;
+  margin-top: 4px;
+}
+
+.lc24-list-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  font-size: 16px;
+  color: var(--lc-ivory);
+}
+
+.lc24-list-mark {
+  flex: none;
+  width: 22px;
+  height: 22px;
+  margin-top: 2px;
+  border-radius: 50%;
+  background: var(--lc-gold);
+  color: #0a2a1f;
+  font-weight: 700;
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- Footer ---------- */
+.lc24-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 36px 20px 44px;
+  background: var(--lc-bg-deep);
+  border-top: 1px solid var(--lc-border);
+}
+
+.lc24-footer-brand {
+  font-family: var(--lc-font-head), Georgia, serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--lc-gold);
+}
+
+.lc24-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+}
+
+.lc24-tag {
+  font-size: 13px;
+  color: var(--lc-muted);
+  text-decoration: none;
+  padding: 6px 12px;
+  border: 1px solid var(--lc-border);
+  border-radius: 999px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.lc24-tag:hover {
+  color: var(--lc-gold-soft);
+  border-color: var(--lc-gold);
+}
+
+.lc24-footer-note {
+  font-size: 13px;
+  color: var(--lc-muted);
+  max-width: 40rem;
+}
+
+/* ---------- Desktop ---------- */
+@media (min-width: 768px) {
+  .lc24-hero {
+    flex-direction: row;
+    align-items: stretch;
+    min-height: 440px;
+  }
+
+  .lc24-hero-inner {
+    order: 1;
+    flex: 1;
+    justify-content: center;
+    padding: 56px 48px;
+  }
+
+  .lc24-hero-img {
+    order: 2;
+    flex: 1;
+    height: auto;
+    min-height: 440px;
+  }
+
+  .lc24-hero-title {
+    font-size: 42px;
+  }
+
+  .lc24-section {
+    padding: 56px 48px;
+  }
+
+  .lc24-h2 {
+    font-size: 30px;
+  }
+
+  .lc24-footer {
+    padding: 44px 48px 56px;
+  }
+}
