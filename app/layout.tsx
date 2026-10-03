@@ -66,6 +66,7 @@ export default function RootLayout({
   return (
     <html lang="ru" className={`lc24-root ${playfair.variable} ${inter.variable}`}>
       <head>
+        <meta name="yandex-verification" content="6201e940a9ab1804" />
         {/* Дополнительные пользовательские теги можно добавлять сюда */}
       </head>
       <body className="lc24-body">
